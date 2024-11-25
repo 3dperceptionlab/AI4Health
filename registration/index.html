@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <base href="..">
+    <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+    <link rel="stylesheet" type="text/css" media="all" href="assets/main.css"/>
+    <meta name="description" content="Conference Template">
+    <meta name="resource-type" content="document">
+    <meta name="distribution" content="global">
+    <meta name="KeyWords" content="Conference">
+    <title>Registration | Conference Template</title>
+</head>
+
+<body>
+
+    <div class="banner">
+        <div class="title">
+            AI4Health Workshops
+        </div>
+        <div class="subtitle">
+            Aplicando Inteligencia Artificial para<br>Mejorar el Bienestar de los Mayores
+        </div>
+        <div class="date">
+            Universidad de Alicente - 28 de Noviembre, 2024
+        </div>
+    </div>
+
+    <table class="navigation">
+        <tr>
+            <td class="navigation">
+                <a class="current" title="Conference Home Page" href=".">Home</a>
+            </td>
+            <td class="navigation">
+                <a title="Directions to the Conference" href="organizacion">Organización</a>
+            </td>
+            <td class="navigation">
+                <a title="Conference Program" href="program">Programa</a> 
+            </td>
+            <td class="navigation">
+                <a title="Register for the Conference" href="registration">Registro</a>
+            </td>
+        </tr>
+    </table>
+
+
+    <br>
+
+    <form id="registrationForm" onsubmit="openMailApp(event)">
+        <label for="name">Nombre:</label><br>
+        <input type="text" id="name" name="name" required placeholder="Your Name"><br><br>
+        
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required placeholder="Your Email"><br><br>
+        
+        <button type="submit">Registrarse</button>
+    </form>
+
+    <script>
+        function openMailApp(event) {
+            event.preventDefault(); // Prevent form submission
+            
+            // Get the user's name and email from the form
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+
+            // Create the email template
+            const subject = encodeURIComponent('AI4Health Workshops Registration Confirmation');
+            const body = encodeURIComponent(`Hola,\n\nSoy ${name}, y confirmo mi asistencia a AI4Health Workshops - Aplicando Inteligencia Artificial para Mejorar el Bienestar de los Mayores. Mi dirección de correo electrónico es ${email}.`);
+
+            // Open the mail application with the template
+            window.location.href = `mailto:3dplab@gcloud.ua.es?subject=${subject}&body=${body}`;
+        }
+    </script>
+
+</body>
+</html>
+
