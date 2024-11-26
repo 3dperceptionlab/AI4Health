@@ -628,3 +628,31 @@ button:hover {
         max-width: 100%; /* Ensure speakers take full width */
     }
 }
+
+.gva {
+    display: block; 
+    margin: auto; 
+    width: 40%; 
+    height: auto;
+}
+
+
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .gva {
+        width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .gva {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .gva {
+        width: 100%;
+    }
+}
