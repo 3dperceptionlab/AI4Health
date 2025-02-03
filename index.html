@@ -6,6 +6,11 @@
     <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
     <link rel="stylesheet" type="text/css" media="all" href="assets/main.css"/>
     <title>AI4Health Workshops</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embedded Video</title>
+
+    <!-- Video.js CSS -->
+    <link href="https://vjs.zencdn.net/8.3.0/video-js.css" rel="stylesheet">
 </head>
 
 <body>
@@ -48,6 +53,24 @@
         Durante el evento, los participantes aprenderán a utilizar tecnologías avanzadas, como análisis de datos, asistentes virtuales, y sistemas de monitoreo inteligente, para abordar necesidades clave de la población mayor, incluyendo la gestión de enfermedades crónicas, el acompañamiento emocional, y la promoción de una vida activa e independiente.
         El workshop combina sesiones teórico-prácticas presentadas por investigadores y profesionales en la aplicación de la IA a la salud. Al final del taller, los asistentes habrán adquirido conocimientos y habilidades para desarrollar e implementar soluciones tecnológicas que impacten positivamente en la vida de los mayores, mientras se fomenta una sociedad más inclusiva y equitativa. 
     </p>
+
+    <h2>Grabación</h2>
+    Si no pudiste asistir al evento, puedes ver la grabación aquí o en <a href="https://vertice.cpd.ua.es/298742">vertice</a>:
+    <div class="video-container">
+        <video id="my-video" class="video-js vjs-default-skin vjs-fluid" poster="https://vertice.cpd.ua.es/cw/img/imagenPlayerVertice.php?id=298742" controls preload="auto">
+            <source src="https://matt3.cpd.ua.es:443/vod/_definst_/mp4:ap_vertice/ew_30246642/id_298742.mp4/playlist.m3u8" type="application/x-mpegURL">
+        </video>
+    </div>
+
+    <!-- Video.js Library -->
+    <script src="https://vjs.zencdn.net/8.3.0/video.min.js"></script>
+
+    <script>
+        var player = videojs('my-video', {
+            responsive: true,
+            fluid: true
+        });
+    </script>
     
     <h2>¿A quién está dirigido?</h2>
 

@@ -656,3 +656,45 @@ button:hover {
         width: 100%;
     }
 }
+
+/* Center the video */
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2em auto;
+    max-width: 100%;
+}
+
+/* Make the video fully responsive */
+.video-js {
+    width: 100%;
+    height: auto;
+    max-width: 800px; /* Matches your content layout */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Ensuring the video scales properly */
+.vjs-fluid {
+    padding-top: 56.25% !important; /* 16:9 Aspect Ratio */
+    position: relative;
+}
+
+.vjs-fluid video {
+    position: absolute;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+@media (max-width: 1200px) {
+    .video-js {
+        max-width: 85%;
+    }
+}
+
+@media (max-width: 768px) {
+    .video-js {
+        max-width: 100%;
+    }
+}
